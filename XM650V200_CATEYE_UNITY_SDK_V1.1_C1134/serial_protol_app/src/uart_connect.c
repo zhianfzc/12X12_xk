@@ -1067,6 +1067,10 @@ static int st_host_to_mod_mid(s_msg *pst_mod_recv_msg)
 			{
 				if (duplicate_face_judge(0) == 0)
 				{
+					if(g_five_input_face_direction == FACE_DIRECTION_MIDDLE) 
+					{
+						enroll_status_reset();
+					}
 
 			/* 五点人脸录入 */
 			if (five_point_enroll(pst_enroll) < 0)
